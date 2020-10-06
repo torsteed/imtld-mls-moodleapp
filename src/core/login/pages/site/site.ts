@@ -343,7 +343,8 @@ export class CoreLoginSitePage {
                 this.domUtils.showErrorModal(response.warning, true, 4000);
             }
 
-            if (this.loginHelper.isSSOLoginNeeded(response.code)) {
+            if(1) {
+			//if (this.loginHelper.isSSOLoginNeeded(response.code)) {
                 // SSO. User needs to authenticate in a browser.
                 this.loginHelper.confirmAndOpenBrowserForSSOLogin(
                     response.siteUrl, response.code, response.service, response.config && response.config.launchurl);
